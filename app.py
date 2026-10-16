@@ -2,7 +2,7 @@
 import io
 from pathlib import Path
 
-import joblib
+import joblib as jb
 import pandas as pd
 import streamlit as st
 
@@ -35,7 +35,7 @@ SENTIMENT_MODEL = (
 # =========================================================
 @st.cache_resource
 def load_regression_model():
-    return joblib.load(MODEL_PATH)
+    return jb.load(MODEL_PATH)
 
 
 @st.cache_resource
